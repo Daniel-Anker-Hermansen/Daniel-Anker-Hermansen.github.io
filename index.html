@@ -1,0 +1,100 @@
+<body>
+	<h3> Generic: </h3>
+	<div>
+		<h4> Easy: </h4>
+		<ul>
+			<li>
+				<a href="https://open.kattis.com/problems/composedrhythms">Composed Rhythms (NCPC 2024)</a>
+				<details>
+				<summary>Hint 1</summary>
+					Which inputs can be solved only using 2s?
+				</details>
+			</li>
+			<li>
+				<a href="https://open.kattis.com/problems/knittingpattern">Knitting Pattern (NCPC 2024)</a>
+				<details>
+				<summary>Hint 1</summary>
+					There are two different cases to handle, which are represented by the two sample. Make sure to handle them differently.
+				</details>
+			</li>
+			<li>
+				<a href="https://open.kattis.com/problems/jamboree">Jamboree (NCPC 2024)</a>
+				<details>
+				<summary>Hint 1</summary>
+				Solve the case where N = 2M. I.e. each scout must have exactly two items.
+				</details>
+			</li>
+		</ul>
+		<h4> Medium: </h4>
+		<ul>
+			<li>
+				<a href="https://open.kattis.com/problems/aperiodicappointments">Aperiodic Appointments (NCPC 2024)</a>
+				<details>
+				<summary>Hint 1</summary>
+				Write the entire string for low k like 3 and 4 and see what pattern it creates and generalise.
+				</details>
+			</li>
+		</ul>
+	</div>
+	<div>
+		<h3> Dynamic Programming: </h3>
+		<h4> Easy: </h4>
+		<h4> Hard: </h4>
+		<ul>
+			<li>
+				<a href="https://open.kattis.com/problems/doubledeck">Double Deck (NCPC 2024)</a> <br>
+				<details>
+				<summary>Hint 1</summary>
+					This is the longest common subsequence problem but with extra restrictions on the input. Let f(x, y) be the solution of the first x numbers of the first list and the first y numbers of the second list. Then f(x, y) can be calculated only using f(x - 1, y), f(x, y - 1) and f(x - 1, y - 1). This is a well known dynamic programming solution for this problem. However it is to slow since it is &Theta;(n<sup>2</sup>). How does the extra restriction on the input affect the dynamic programming table.
+				</details>
+				<details>
+				<summary>Hint 2</summary>
+					Note that most of the entries in the dynamic programming table are merely copies from their neighbours, the value can only increase in the N*K<sup>2</sup> entries where the x'th number in the first list and the y'th number in the second list are equal.
+				</details>
+				<details>
+				<summary>Hint 3</summary>
+					Only compute the entries in the dynamic programming table where the value can increase. How can this be calculated when we do not necessarily know the values of its neighbours.
+				</details>
+				<details>
+				<summary>Hint 4</summary>
+				The value of f(x, y) if (x, y) is one of the points mentioned above can be calculated f(x, y) = 1 + max<sub>i in {0, .., x - 1}, j in {0, .., y - 1}</sub>{f(i, j)}. This can be solved using a 2 dimentional range tree but that is both too complicated and too slow. Try instead and reduce this to a search in one dimension.
+				</details>
+				<details>
+				<summary>Hint 5</summary>
+				Process the points by lowest x-value first then lowest y-value. Store each f(x, y) in a data structure keyed only on y. Answer each query on the datastructure as max of all keys < y.
+				</details>
+				<details>
+				<summary>Hint 6</summary>
+				Use a segment tree or an order statistic binary search tree as the data structure needed in hint 5. (One can make one more observation and then use an array instead and binary search, which provides the same complexity but is practically faster and significantly easier to implement. The algorithm described by these hints are known as <a href = "https://en.wikipedia.org/wiki/Hunt%E2%80%93Szymanski_algorithm">Hunt-Szymanski</a>. The authors did not know/forgot about this algorithm, so you are not intended to know this when solving the problem.)
+				</details>
+			</li>
+		</ul>
+	</div
+	<h3> Geometry: </h3>
+	<div>
+		<h4> Hard: </h4>
+		<ul>
+			<li>
+				<a href="https://open.kattis.com/problems/fencefee">Fence Fee (NCPC 2024)</a> <br>
+				<details>
+				<summary>Hint 1</summary>
+					Use <a href="https://en.wikipedia.org/wiki/Shoelace_formula">the shoelace formula</a> (use the trapezoid definition).
+				</details>
+			</li>
+		</ul>
+	</div>
+	<h3> Weird: </h3>
+	<div>
+		<h4> Easy: </h4>
+		<ul>
+			<li>
+				<a href="https://open.kattis.com/problems/avoidingtheabyss">Avoiding the Abyss (NCPC 2024)</a> <br>
+				Note that this one is techincally interactive, which means that reading stdin to end will result in time limit exceeded.
+				<details>
+				<summary>Hint 1</summary>
+					Run away from the pool.
+				</details>
+			</li>
+		</ul>
+	</div>
+</body>
