@@ -14,21 +14,24 @@
 				<a href="https://open.kattis.com/problems/knittingpattern">Knitting Pattern (NCPC 2024)</a>
 				<details>
 				<summary>Hint 1</summary>
-					There are two different cases to handle, which are represented by the two sample. Make sure to handle them differently.
+					There are two different cases to handle, which are represented by the two samples. Make sure to handle them differently.
 				</details>
 			</li>
 			<li>
-				<a href="https://open.kattis.com/problems/jamboree">Jamboree (NCPC 2024)</a>
+				<a href="https://open.kattis.com/problems/jamboree">Jamboree (NCPC 2023)</a>
 				<details>
 				<summary>Hint 1</summary>
 				Solve the case where N = 2M. I.e. each scout must have exactly two items.
 				</details>
 			</li>
+			<li>
+				<a href="https://open.kattis.com/problems/diehard">Die Hard (NCPC 2023)</a>
+			</li>
 		</ul>
 		<h4> Medium: </h4>
 		<ul>
 			<li>
-				<a href="https://open.kattis.com/problems/aperiodicappointments">Aperiodic Appointments (NCPC 2024)</a>
+				<a href="https://open.kattis.com/problems/aperiodicappointments">Aperiodic Appointments (NCPC 2023)</a>
 				<details>
 				<summary>Hint 1</summary>
 				Write the entire string for low k like 3 and 4 and see what pattern it creates and generalise.
@@ -57,7 +60,7 @@
 				</details>
 				<details>
 				<summary>Hint 4</summary>
-				The value of f(x, y) if (x, y) is one of the points mentioned above can be calculated f(x, y) = 1 + max<sub>i in {0, .., x - 1}, j in {0, .., y - 1}</sub>{f(i, j)}. This can be solved using a 2 dimentional range tree but that is both too complicated and too slow. Try instead and reduce this to a search in one dimension.
+				The value of f(x, y) if (x, y) is one of the points mentioned above can be calculated f(x, y) = 1 + max<sub>i in {0, .., x - 1}, j in {0, .., y - 1}</sub>{f(i, j)}. This can be solved using a 2 dimentional range tree but that is both too complicated and too slow. Instead try to reduce this to a search in one dimension.
 				</details>
 				<details>
 				<summary>Hint 5</summary>
@@ -65,10 +68,33 @@
 				</details>
 				<details>
 				<summary>Hint 6</summary>
-				Use a segment tree or an order statistic binary search tree as the data structure needed in hint 5. (One can make one more observation and then use an array instead and binary search, which provides the same complexity but is practically faster and significantly easier to implement. The algorithm described by these hints are known as <a href = "https://en.wikipedia.org/wiki/Hunt%E2%80%93Szymanski_algorithm">Hunt-Szymanski</a>. The authors did not know/forgot about this algorithm, so you are not intended to know this when solving the problem.)
+				Use a segment tree or an order statistic binary search tree as the data structure needed in hint 5. (One can make one more observation and then use an array instead and binary search, which provides the same complexity but is practically faster and significantly easier to implement. The algorithm described by these hints is known as <a href = "https://en.wikipedia.org/wiki/Hunt%E2%80%93Szymanski_algorithm">Hunt-Szymanski</a>. The authors did not know/forgot about this algorithm, so you are not intended to know this when solving the problem.)
 				</details>
 			</li>
 		</ul>
+		<h4> Very Hard: </h4>
+		<ul>
+			<li>
+				<a href="https://open.kattis.com/problems/electroniccomponents">Electronic Components (NCPC 2023)</a> <br>
+				<details>
+				<summary>Hint 1</summary>
+				Let f(i, j) be the cost of placing the first i types of items where exactly j are placed by themselves.
+				</details>
+				<details>
+				<summary>Hint 2</summary>
+				If you have written a correct transition function for the dp hinted above, you may have noticed that these can be written as a minimum over some parameter. Unfortunately the sequence we are doing minimum over is different for j for a fixed i for f(i, j). Do some math to fix this.
+				</details>
+				<details>
+				<summary>Hint 3</summary>
+				For the math in the previous hint use a rewrite ala g(j) = f(i, j) + q(j), where q is some function such that the transition gets the form of a max over a sequence plus some constant for a fixed i, j pair.
+				</details>
+				<details>
+				<summary>Hint 4</summary>
+				The transitions can be solved in logarithmic time with a segment tree. Beware of parity
+				</details>
+			</li>
+		</ul>
+		
 	</div
 	<h3> Geometry: </h3>
 	<div>
@@ -89,11 +115,19 @@
 		<ul>
 			<li>
 				<a href="https://open.kattis.com/problems/avoidingtheabyss">Avoiding the Abyss (NCPC 2024)</a> <br>
-				Note that this one is techincally interactive, which means that reading stdin to end will result in time limit exceeded.
 				<details>
 				<summary>Hint 1</summary>
 					Run away from the pool.
 				</details>
+			</li>
+		</ul>
+	</div>
+	<h3> Interactive: </h3>
+	<div>
+		<h4> Medium: </h4>
+		<ul>
+			<li>
+				<a href="https://open.kattis.com/problems/karlcoder">Karl Coder (NCPC 2023)</a> <br>
 			</li>
 		</ul>
 	</div>
