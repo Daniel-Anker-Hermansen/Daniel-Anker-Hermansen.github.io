@@ -11,6 +11,13 @@
 				</details>
 			</li>
 			<li>
+				<a href="https://open.kattis.com/problems/coffeecupcombo">Coffee Cup Combo (NCPC 2022)</a>
+				<details>
+				<summary>Hint 1</summary>
+				When leaving a coffee machine is there any reason to not take two cups with her? If she has a cup of coffee in hand is there any reason not to drink it?
+				</details>
+			</li>
+			<li>
 				<a href="https://open.kattis.com/problems/knittingpattern">Knitting Pattern (NCPC 2024)</a>
 				<details>
 				<summary>Hint 1</summary>
@@ -27,9 +34,27 @@
 			<li>
 				<a href="https://open.kattis.com/problems/diehard">Die Hard (NCPC 2023)</a>
 			</li>
+			<li>
+				<a href="https://open.kattis.com/problems/convertingromans">Converting Romans (NCPC 2023)</a>
+				<details>
+				<summary>Hint 1</summary>
+				For each index calculate the largest digit in the suffix starting with this index. For example for the string IXIVI you should get XXVVI.
+				</details>
+				<details>
+				<summary>Hint 2</summary>
+				The largest in the suffix beginning in index i is either the ith charachter in the strong or the largest in the suffix starting in index i + 1. (This is actually a simple example of dynamic programming.)
+				</details>
+			</li>
 		</ul>
 		<h4> Medium: </h4>
 		<ul>
+			<li>
+				<a href="https://open.kattis.com/problems/antennaanalysis">Antenna Analysis (NCPC 2021)</a>
+				<details>
+				<summary>Hint 1</summary>
+				Keep a running minimum and maximum but adjust it for each index to account for c.
+				</details>
+			</li>
 			<li>
 				<a href="https://open.kattis.com/problems/aperiodicappointments">Aperiodic Appointments (NCPC 2023)</a>
 				<details>
@@ -42,13 +67,41 @@
 	<div>
 		<h3> Dynamic Programming: </h3>
 		<h4> Easy: </h4>
+		<ul>
+			<li>
+				<a href="https://open.kattis.com/problems/graduationguarantee">Graduation Guarantee (NCPC 2022)</a>
+				<details>
+				<summary>Hint 1</summary>
+				If you choose to answer q questions, which ones of the n question do you choose.
+				</details>
+				<details>
+				<summary>Hint 2</summary>
+				Calculate the probabilty of getting p points answering the first i questions.
+				</details>
+				<details>
+				<summary>Hint 3</summary>
+				Do not use a recursive solution. The time limit is to harsh for this.
+				</details>
+			</li>
+			<li>
+				<a href="https://open.kattis.com/problems/highesthill">Highest Hill (NCPC 2022)</a>
+				<details>
+				<summary>Hint 1</summary>
+				How do you calculate the "left base" of the peak for each index i?
+				</details>
+				<details>
+				<summary>Hint 2</summary>
+				For an index i if h[i] >= h[i - 1], then set b[i] = b[i - 1] otherwise b[i] = h[i].
+				</details>
+			</li>
+		</ul>
 		<h4> Hard: </h4>
 		<ul>
 			<li>
 				<a href="https://open.kattis.com/problems/doubledeck">Double Deck (NCPC 2024)</a> <br>
 				<details>
 				<summary>Hint 1</summary>
-					This is the longest common subsequence problem but with extra restrictions on the input. Let f(x, y) be the solution of the first x numbers of the first list and the first y numbers of the second list. Then f(x, y) can be calculated only using f(x - 1, y), f(x, y - 1) and f(x - 1, y - 1). This is a well known dynamic programming solution for this problem. However it is to slow since it is &Theta;(n<sup>2</sup>). How does the extra restriction on the input affect the dynamic programming table.
+					This is the longest common subsequence problem but with extra restrictions on the input. Let f(x, y) be the solution of the first x numbers of the first list and the first y numbers of the second list. Then f(x, y) can be calculated only using f(x - 1, y), f(x, y - 1) and f(x - 1, y - 1). This is a well known dynamic programming solution for this problem. However it is to slow since it is &Theta;(n<sup>2</sup>). How does the extra restriction on the input affect the dynamic programming table?
 				</details>
 				<details>
 				<summary>Hint 2</summary>
@@ -96,8 +149,124 @@
 		</ul>
 		
 	</div
+	<h3> Graph: </h3>
+	<div>
+		<h4> Medium: </h4>
+		<ul>
+			<li>
+				<a href="https://open.kattis.com/problems/berrybattle">Berry Battle (NCPC 2022)</a> <br>
+				<details>
+				<summary>Hint 1</summary>
+				Focus on just two adjacent ants and make them never meet.
+				</details>
+			</li>
+			<li>
+				<a href="https://open.kattis.com/problems/customscontrols">Customs Controls (NCPC 2021)</a> <br>
+				<details>
+				<summary>Hint 1</summary>
+				If a vertex is not on a shortest path, it does not matter who is placed there.
+				</details>
+				<details>
+				<summary>Hint 2</summary>
+				If all vertices on a shortest path can be placed with one country do that, otherwise choose one of the ends and all neighbours. Choose the one with the fewest vertices and place the country with the most officers there. This does not work if there exists paths with only one intermediate. This case is left as an exercise to the reader.
+				</details>
+			</li>
+			<li>
+				<a href="https://open.kattis.com/problems/deceptivedirections">Deceptive Directions (NCPC 2021)</a> <br>
+				<details>
+				<summary>Hint 1</summary>
+				Try all three possibilities for each instruction.
+				</details>
+				<details>
+				<summary>Hint 2</summary>
+				Limit the search by using the fact that the original path is a shortest path.
+				</details>
+			</li>
+		</ul>
+		</ul>
+		<h4> Hard: </h4>
+		<ul>
+			<li>
+				<a href="https://open.kattis.com/problems/icyitinerary">Icy Itinerary (NCPC 2022)</a> <br>
+				<details>
+				<summary>Hint 1</summary>
+				Solve it incrementally.
+				</details>
+				<details>
+				<summary>Hint 2</summary>
+				The order that you add vertices to the incremental solution does not matter.
+				</details>
+			</li>
+		</ul>
+		<h4> Very Hard: </h4>
+		<ul>
+			<li>
+				<a href="https://open.kattis.com/problems/groupsofstrangers">Groups of Strangers (NCPC 2023)</a> <br>
+				<details>
+				<summary>Hint 1</summary>
+				Find the CEO
+				</details>
+				<details>
+				<summary>Hint 2</summary>
+				Brute force a few employees such that the rest has at most two choices.
+				</details>
+				<details>
+				<summary>Hint 3</summary>
+				<a href="https://cp-algorithms.com/graph/2SAT.html" >2-SAT</a>
+				</details>
+			</li>
+			<li>
+				<a href="https://open.kattis.com/problems/aroyalproblem">A Royal Problem (NUS CP)</a> <br>
+				<details>
+				<summary>Hint 1</summary>
+				Biconnected components.
+				</details>
+				<details>
+				<summary>Hint 2</summary>
+				Lowest common ancestor.
+				</details>
+				<details>
+				<summary>Hint 3</summary>
+				Check overlapping paths in a tree. Beware of articulation vertices which belong to multiple components.
+				</details>
+			</li>
+			<li>
+				<a href="https://open.kattis.com/problems/magicaldistances">Magical Distances (ProgNova 2020)</a> <br>
+				<details>
+				<summary>Hint 1</summary>
+				What if the graph was small.
+				</details>
+				<details>
+				<summary>Hint 2</summary>
+				Notice the strange bound on m
+				</details>
+				<details>
+				<summary>Hint 3</summary>
+				The graph is essentially a tree with a few extra edges. Ignoring the extra edges there is only one path. Therefore any path becomes an interleaving of following an extra edge and following a path on the tree. This produces a graph with only 400 vertices but still to many edges.
+				</details>
+				<details>
+				<summary>Hint 4</summary>
+				Reduce the number of edges to linear in the number of vertices in the contracted graph by adding extra vertices.
+				</details>
+				<details>
+				<summary>Hint 5</summary>
+				The extra vertices to be added are the lowest common ancestors of all the pairs of existing vertices. It can be shown that the amount of these is linear.
+				</details>
+			</li>
+		</ul>
+	</div>
 	<h3> Geometry: </h3>
 	<div>
+		<h4> Easy: </h4>
+		<ul>
+			<li>
+				<a href="https://open.kattis.com/problems/discdistrict">Disc District (NCPC 2022)</a> <br>
+				<details>
+				<summary>Hint 1</summary>
+				The distance between two points can be found with the Pythagorean theorem. Since these are integer points the distance can only be square roots of integers. What is the smallest number greater than r which is a square root of an integer.
+				</details>
+			</li>
+		</ul>
 		<h4> Hard: </h4>
 		<ul>
 			<li>
@@ -105,6 +274,23 @@
 				<details>
 				<summary>Hint 1</summary>
 					Use <a href="https://en.wikipedia.org/wiki/Shoelace_formula">the shoelace formula</a> (use the trapezoid definition).
+				</details>
+			</li>
+		</ul>
+	</div>
+	<h3> Number Theory: </h3>
+	<div>
+		<h4> Hard: </h4>
+		<ul>
+			<li>
+				<a href="https://open.kattis.com/problems/factorfulltree">Factor-Full Tree (NCPC 2023)</a> <br>
+				<details>
+				<summary>Hint 1</summary>
+					Place prime numbers on edges.
+				</details>
+				<details>
+				<summary>Hint 2</summary>
+					Use small prime numbers for deep leaves/long paths, and big prime numbers for high leaves/short paths.
 				</details>
 			</li>
 		</ul>
@@ -118,6 +304,16 @@
 				<details>
 				<summary>Hint 1</summary>
 					Run away from the pool.
+				</details>
+			</li>
+		</ul>
+		<h4> Medium: </h4>
+		<ul>
+			<li>
+				<a href="https://open.kattis.com/problems/junkjourney">Junk Journey (NCPC 2022)</a> <br>
+				<details>
+				<summary>Hint 1</summary>
+				The number of moves allowed is plenty. Solve one cart at a time but keep track of where the others are.
 				</details>
 			</li>
 		</ul>
