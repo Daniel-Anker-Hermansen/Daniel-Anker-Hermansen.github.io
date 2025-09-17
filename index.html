@@ -48,6 +48,13 @@
 				<a href="https://open.kattis.com/problems/diehard">Die Hard (NCPC 2023)</a>
 			</li>
 			<li>
+				<a href="https://open.kattis.com/problems/bookshelfbottleneck">Bookshelf Bottleneck (GCPC 2024)</a>
+				<details>
+				<summary>Hint 1</summary>
+				Orient the books so that they are the least wide.
+				</details>
+			</li>
+			<li>
 				<a href="https://open.kattis.com/problems/convertingromans">Converting Romans (NCPC 2023)</a>
 				<details>
 				<summary>Hint 1</summary>
@@ -62,11 +69,25 @@
 		<h4> Medium: </h4>
 		<ul>
 			<li>
+				<a href="https://open.kattis.com/problems/interference">Interference (GCPC 2024)</a>
+				<details>
+				<summary>Hint 1</summary>
+				O(n<sup>2</sup>) is sufficient.
+				</details>
+				<details>
+				<summary>Challenge </summary>
+				Can you solve it in O(n log n)?
+				</details>
+			</li>
+			<li>
 				<a href="https://open.kattis.com/problems/fairplay">Fair Play (BAPC 2021)</a>
 				<details>
 				<summary>Hint 1</summary>
 				Assume there is a solution, then what will each teams combined skill levels be? Find two sums which must be equal if there is a solution.
 				</details>
+			</li>
+			<li>
+				<a href="https://open.kattis.com/problems/kittenofchaos">Kitten of Chaos (GCPC 2024)</a>
 			</li>
 			<li>
 				<a href="https://open.kattis.com/problems/antennaanalysis">Antenna Analysis (NCPC 2021)</a>
@@ -98,6 +119,42 @@
 				<details>
 				<summary>Hint 2</summary>
 				Compute it for each prefix of problem solved sorted in order of when it was solved and take the minimum. (Wait is this actually a dynamic programming problem?)
+				</details>
+			</li>
+			<li>
+				<a href="https://open.kattis.com/problems/musicalmending">Musical Mending (GCPC 2024)</a>
+				<details>
+				<summary>Hint 1</summary>
+				Consider the simple problem where all keys need to be changed to the same value instead. Reduce the original problem to this.
+				</details>
+			</li>
+		</ul>
+		<h4> Hard: </h4>
+		<ul>
+			<li>
+				<a href="https://open.kattis.com/problems/laundry">Laundry (GCPC 2024)</a>
+				<details>
+				<summary>Hint 1</summary>
+				There always exist an optimal solution where one of AB, BC or AC are all placed in the same type of program.
+				</details>
+			</li>
+			<li>
+				<a href="https://open.kattis.com/problems/darkalley">Dark Alley(GCPC 2024)</a>
+				<details>
+				<summary>Hint 1</summary>
+				Consider the static version of the problem, where you get k lights and q queries, this can be solved in O(k + n + q).
+				</details>
+				<details>
+				<summary>Hint 2</summary>
+				Suppose the semi-dynamic version of the problem where you get k lights and q queries where some of the queries can be adding or removing a light. Then this can be solved in O(k + n + q<sup>2</sup>).
+				</details>
+				<details>
+				<summary>Hint 3</summary>
+				Solve it as follows. Do some queries, then start over but as the lights seen in the queries so far as the static input in a semi-dynamic version, and do some queries again. Find the optimal number of queries for each iteration.
+				</details>
+				<details>
+				<summary>Note</summary>
+				The hints sketch a solution which is slower than the intended. It might not pass for Java or Python but it does for C++, if written okay.
 				</details>
 			</li>
 		</ul>
@@ -205,6 +262,16 @@
 		
 	</div>
 	<h3> Graph: </h3>
+		<h4> Easy: </h4>
+		<ul>
+			<li>
+				<a href="https://open.kattis.com/problems/alienattack2">Alien Attack 2 (GCPC 2024)</a> <br>
+				<details>
+				<summary>Hint 1</summary>
+				Components.
+				</details>
+			</li>
+		</ul>
 	<div>
 		<h4> Medium: </h4>
 		<ul>
